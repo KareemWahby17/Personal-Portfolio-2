@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kareem Wahby</title>
+    <link href="home.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <span id="logo">KW</span>
+            <a id="home" href="#homePage" class="active">Home</a>
+            <a id="about" href="#aboutPage" class="inactive">About</a>
+            <a id="education" href="#educationPage" class="inactive">Education</a>
+            <a id="experience" href="#experiencePage" class="inactive">Experience</a>
+            <!--<a id="skills" href="" class="inactive">Skills</a>-->
+            <a id="projects" href="#projectsPage" class="inactive">Projects</a>
+            <a id="contact" href="" class="inactive">Contact</a>
+        </nav>
+    </header>
+    <main id="homePage">
+        <div id="description">
+            <h2>Hi, I am </h2>
+            <h1 id="kareem" style="color:royalblue">KAREEM WAHBY</h1><br>
+            <p>COMPUTER ENGINEERING STUDENT</p><br>
+            <div id="btnContainer">
+                <button class="btn" id="contactbtn">Contact Me</button>
+                <button class="btn" id="hirebtn" >Hire Me</button>
+            </div>
+        </div>
+        <div id="picture">
+             <img src="Professional%20photo.png">
+        </div>
+    </main>
+
+    <section id="aboutPage">
+        <div id="picture2"><img src="professional%20photo.png"></div>
+        <main>
+            <h1 style="color: dodgerblue">About Me</h1><br>
+            <p style="color: white">A dedicated young hardworking student, who is aiming to explore the world through starting his career early on and gaining experience to complement his studies at the university and take his skills to a new level of professionalism and looking forward to making new connections hoping they will last a life time.</p>
+        </main>
+    </section>
+
+    <section id = "educationPage">
+        <div id="school" class="eduSection">
+            <h2>School</h2>
+            <p>Scoring the highest possible grades in all studied subjects including:</p>
+            <ul>
+                <li>AS Math</li>
+                <li>A2 Math</li>
+                <li>As Physics</li>
+                <li>A2 Physics</li>
+                <li>AS Arabic</li>
+                <li>A2 Arabic</li>
+                <li>OL Math</li>
+                <li>OL Physics</li>
+                <li>OL Chemistry</li>
+                <li>OL Biology</li>
+                <li>OL English</li>
+                <li>OL IT</li>
+                <li>OL CS</li>
+                <li>OL German</li>
+            </ul>
+        </div>
+        <div id="university" class="eduSection">
+            <h2>University</h2>
+            <p>I am enrolled in the <b>Computer Engineering</b> program offered by the <b>German University in Cairo (GUC)</b>. Currently, I am in my
+            second year and my GPA is <b>1.39</b> according to the german scale. I have scored straight <b>As</b> in all the subjects related to <b>CS</b>
+            which makes CS my number 1 point of strength.</p>
+        </div>
+        <div id="extra" class="eduSection">
+            <h2>Extra</h2>
+            <p>I always like to go for the extra step which helped me acquire alot of skills over the past few years.
+                Some of the extra extracurricular activities that I have done includes:</p>
+            <ul>
+                <li>Completing CS50P course and getting a certificate from Harvard for successfully completing the course with all it's
+                assignments and final project</li>
+                <li>Learning German language until the B1 level</li>
+                <li>Learning Python and implementing a number of projects using it</li>
+                <li>Learning HTML and CSS</li>
+                <li>Currently, learning Javascript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experiencePage">
+            <div id="ahk" class="card" style="width: 50%">
+                <img class="experienceLogo" src="ahkLogo.png" style="background: white">
+                <img src="kareem.jpg" style="scale: 0.72 ; transform: translate(-20% ,-30%)">
+                <h3>German-Arab Chamber of Industry and Commerce</h3>
+                <p style="margin-top: 30px;margin-right: 10px">
+                    After my senior year in school, I was part of the AHK vocational training team. I helped in alot of tasks from which I have learned alot. These tasks included:
+                </p>
+                <ul style="font-size: 16px">
+                    <li>Organizing/ sorting out exams</li>
+                    <li>supporting in an inventory</li>
+                    <li>Supporting in electronic and physical filing</li>
+                    <li>Supporting in physical examinations</li>
+                    <li>Event management and helping in financial revision</li>
+                </ul>
+            </div>
+            <div id="dresden" class="card" style="width: 50%">
+                <img class="experienceLogo" src="dresdenLogo.jpeg">
+                <img src="dresden3.jpg" style="transform: scale(50%) translate(-50%,-50%); position:absolute ">
+                <h3>Dresden Marketing GmbH</h3>
+                <p style="margin-top: 0px;margin-right: 10px">
+                    My second internship was at Dresden Marketing GmbH in Germany. which was a marketing internship which allowed me to discover a new field, in addition to the work environment in Germany.
+                    I was mainly working for the online marketing department and my tasks were:
+                </p>
+                <ul style="font-size: 16px">
+                    <li>Support with content production for DMG's social media channels (especially Instagram, TikTok)</li>
+                    <li>Support with translation work for the website</li>
+                    <li>Testing the products 'City tour', 'City tour by bus' and 'Neustadt walk' to gain product knowledge
+                        and prepare for working in the tourist information centre</li>
+                    <li>Working in the official tourist information centre of the state capital of Dresden (including
+                        restocking products and flyers, recording inventories, advising visitors)</li>
+                </ul>
+            </div>
+    </section>
+
+    <section id="projectsPage">
+        <div id="projectContainer">
+            <div class="card projects" style="background-image: url('2dGraph.png'); background-size: cover; background-position-x: -20px">
+                <h3>Graph calculator</h3>
+                <p>A visual calculator, that given a function of 1 variable displays it's graph in the x-y plane.</p>
+            </div>
+            <div class="card projects" style="background-image: url('3dGraph.png'); background-size: cover; background-position-x: -20px">
+                <h3>3D Graph Calculator</h3>
+                <p>An enhanced visual calculator, that given a function of 2 variables displays their graph in the x-y-z plane.</p>
+            </div>
+            <div class="card projects" style="background-image: url('travel.png'); background-size: contain; background-repeat: no-repeat">
+                <h3>Traveling App</h3>
+                <p>This was my final project in the CS50P course provided by Harvard. It shows the user the main attractions from different countries. A table containing the main tourist attractions in the country is displayed and pictures for those places are shown.</p>
+            </div>
+            <div class="card projects" style="background-image: url('language.png'); background-size: contain; background-repeat: no-repeat">
+                <h3>Language Learning App</h3>
+                <p>This is a Python program that shows a word in German and wait for the user to say it's meaning in English, using audio recognition features. The program gives the correct word in case the user input was wrong.</p>
+            </div>
+            <div class="card projects" style="background-image: url('schedule.jpg'); background-size: cover">
+                <h3>University Schedule Generator</h3>
+                <p>A university schedule generator that creates a schedule for each student with no clashes and the desired number of days off, a general schedule for the whole university and the common free times between all students. It was written using Prolog.</p>
+            </div>
+            <div class="card projects" style="background-image: url('encryptor.png'); background-size: contain; background-repeat: no-repeat">
+                <h3>Encrypter/Decrypter</h3>
+                <p>An encrypter / decrypter hardware circuit that encrypts / decrypts a number ,from 0 to 7, according to an encryption chart and displays the output on a 7 segment display.</p>
+            </div>
+            <div class="card projects" style="background-image: url('Web.png'); background-size: contain; background-repeat: no-repeat">
+                <h3>Web Development</h3>
+                <p>I have recently learned HTML and CSS through different projects including this personal portfolio and a login page. I am currently  learning Javascript and in the near future, I will be focusing on frameworks like react and nodejs.</p>
+            </div>
+            <div class="card projects" style="background-image: url('todo.png'); background-size: contain; background-repeat: no-repeat">
+                <h3>Others</h3>
+                <p>I built an online to do list using a non code app, and I am currently working on multiple projects including a game called Jakeroo, a basic computer hardware implementation and an audio processing program.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

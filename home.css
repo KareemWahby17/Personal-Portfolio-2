@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    background-color: #021245FF;
+    font-family: Arial;
+}
+body h1{
+    font-size: 4em;
+}
+body h2{
+    font-weight: lighter;
+    font-size: xxx-large;
+}
+body p{
+    font-size: 1.5em;
+}
+
+nav{
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: right;
+    position: fixed;
+    border-radius: 20px;
+    font-weight: bolder;
+    z-index: 999 ;
+}
+span{
+    font-size: 1.25em;
+    margin-right: auto;
+    color: #021245FF;
+}
+nav a{
+    text-decoration: none;
+    color: royalblue;
+    font-size: 1.25em;
+    font-family: Calibri;
+}
+#homePage{
+    display: flex;
+    height: 100%;
+    background-image: linear-gradient(to top,white,whitesmoke);
+    border-radius: 20px;
+    align-items: center;
+    padding-left: 50px;
+}
+#description{
+    width: 60%;
+    padding: 20px;
+    cursor: default;
+}
+#picture {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#picture img{
+    transform: scale(180%) translateX(-25px);
+    padding-top: 45px;
+    filter: drop-shadow(8px 8px 100px royalblue);
+}
+#btnContainer{
+    display: flex;
+    max-width: 350px;
+    column-gap: 30px;
+    margin-top: 20px;
+}
+.btn{
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.active{
+    border-bottom: royalblue;
+    border-bottom-style: solid;
+}
+.inactive:hover {
+    border-bottom: royalblue;
+    border-bottom-style: solid;
+    font-weight: bold;
+    text-underline: royalblue;
+    transform: translateY(-10px);
+}
+#contactbtn{
+    background-color: #021245FF;
+}
+#hirebtn{
+    background-color: white;
+    color: dodgerblue;
+    border-color: dodgerblue;
+}
+#contactbtn:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px #021245FF;
+    border-style: none;
+    color: dodgerblue;
+    transition: linear 100ms;
+}
+#hirebtn:hover{
+    transform: scale(1.1);
+    color: white;
+    animation-name: color;
+    animation-duration: 1s;
+    background-color:dodgerblue;
+    border-style: none;
+    box-shadow: 2px 2px 10px dodgerblue;
+    transition: linear 100ms;
+}
+
+#aboutPage{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+#aboutPage main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-right: 100px;
+
+}
+
+#picture2{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+#picture2 img{
+    padding-top: 45px;
+    transform: rotateY(180deg) scale(180%);
+    margin-bottom: auto;
+}
+
+#educationPage{
+    height: 100%;
+    border-radius:20px ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+
+}
+.eduSection{
+    height: 80%;
+    width: 25%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-image: linear-gradient(dodgerblue,whitesmoke);
+    filter: drop-shadow(0px 8px 8px dodgerblue);
+    text-align: center;
+    color: whitesmoke;
+    font-family: "Arial Black";
+}
+#educationPage ul{
+    text-align: left;
+    margin-left: 30px;
+    color: #021245;
+    font-family: Calibri;
+    font-size: 20px;
+}
+#educationPage p{
+    text-align: left;
+    padding-left: 15px;
+    font-size: large;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: Calibri;
+    color: #021245;
+}
+#experiencePage{
+    height: 100%;
+    border-radius:20px ;
+    display: flex;
+    background-image: linear-gradient(#021245,royalblue);
+    padding: 80px 80px 40px 80px;
+    justify-content: space-evenly;
+    gap: 80px;
+}
+.card {
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    z-index: 3;
+    filter: drop-shadow(8px 8px 8px black);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to top, black, rgb(30, 144, 255, 0.3));
+  z-index: 1;
+}
+
+.card h3 {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: dodgerblue;
+    z-index: 2;
+    font-size: 2em;
+}
+.experienceLogo{
+    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 3%;
+    left: 20px;
+    z-index: 2;
+}
+.card p{
+    position: absolute;
+    z-index: 2;
+    top: 58%;
+    left: 20px;
+    color: whitesmoke;
+    font-size: large;
+}
+.card ul{
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    left: 40px;
+    color: whitesmoke;
+    font-size: large;
+}
+
+#projectsPage{
+    height: 100%;
+    padding: 80px 30px 30px 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(to top right,royalblue,whitesmoke);
+}
+#projectContainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    gap: 1rem; /* spacing between cards */
+}
+.projects{
+    filter: none;
+    border-color: #021245;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+}
+.projects h3{
+    font-size: 20px;
+}
+.projects p{
+    padding-top:5px ;
+    font-size: 15px;
+}
