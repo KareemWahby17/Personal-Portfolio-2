@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Kareem Wahby</title>
+    <link href="contactForm.css" rel="stylesheet">
     <link href="home.css" rel="stylesheet">
     <link rel="icon" href="kw.png" type="png">
+    <script src="https://kit.fontawesome.com/6550fff3cb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -16,7 +18,7 @@
             <a id="experience" href="#experiencePage" class="inactive">Experience</a>
             <!--<a id="skills" href="" class="inactive">Skills</a>-->
             <a id="projects" href="#projectsPage" class="inactive">Projects</a>
-            <a id="contact" href="" class="inactive">Contact</a>
+            <a id="contact" href="#contactPage" class="inactive">Contact</a>
         </nav>
     </header>
     <main id="homePage">
@@ -153,6 +155,29 @@
                 <h3>Others</h3>
                 <p>I built an online to do list using a non code app, and I am currently working on multiple projects including a game called Jakeroo, a basic computer hardware implementation and an audio processing program.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="contactPage">
+        <div id="blur" action="https://api.web3forms.com/submit" method="POST">
+            <form id="container">
+                <div class="section" id="left">
+                    <h1 id="SignInTitle" style="margin-bottom: 10px;font-family: 'Arial Black'; font-size: 2.5em; cursor: default;">Contact Me</h1>
+                    <div id="icons">
+                        <button type="button"><i class="fa-brands fa-google fa-2x"> </i></button>
+                        <button type="button"><i class="fa-brands fa-github fa-2x"></i></button>
+                        <button type="button"><i class="fa-brands fa-linkedin-in fa-2x"></i></button>
+                    </div>
+                    <input type="hidden" name="access_key" value="ba20734e-aa8d-4a22-9fa8-1e09ef2d0e69">
+                    <input type="text" name="name" id="name" class="in" placeholder="Name" autocomplete="off" required>
+                    <input type="email" name="email" id="email" class="in" placeholder="Email" autocomplete="off" required>
+                    <input type="text" name="subject" id="subject" class="in" placeholder="Subject" autocomplete="off">
+                    <button id="submit" class="btn">Submit</button>
+                </div>
+                <div class="section" id="message">
+                        <textarea id="messageInput" name="message" class="in" placeholder="Please type your message here" autocomplete="off" required></textarea>
+                </div>
+            </form>
         </div>
     </section>
 

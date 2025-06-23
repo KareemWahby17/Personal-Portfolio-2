@@ -274,3 +274,13 @@ nav a{
     padding-top:5px ;
     font-size: 15px;
 }
+#contactPage{
+    height: 100%;
+    padding: 80px 30px 30px 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(#021245,royalblue);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
