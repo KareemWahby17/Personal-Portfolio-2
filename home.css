@@ -10,7 +10,7 @@ body{
     font-family: Arial;
 }
 body h1{
-    font-size: 4em;
+    font-size: clamp(2em,10vh,4em);
 }
 body h2{
     font-weight: lighter;
@@ -89,6 +89,9 @@ nav a{
 .active{
     border-bottom: royalblue;
     border-bottom-style: solid;
+}
+.inactive{
+    border-style: none;
 }
 .inactive:hover {
     border-bottom: royalblue;
