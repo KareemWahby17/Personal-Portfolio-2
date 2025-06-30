@@ -6,7 +6,7 @@
 }
 body{
     height: 100vh;
-    background-color: #021245FF;
+    background-color: lavender ;
     font-family: Arial;
 }
 body h1{
@@ -14,10 +14,10 @@ body h1{
 }
 body h2{
     font-weight: lighter;
-    font-size: xxx-large;
+    font-size: clamp(2em,5vh,3.5em);
 }
 body p{
-    font-size: 1.5em;
+    font-size: clamp(1em,3vh,1.75em);
 }
 
 nav{
@@ -47,40 +47,40 @@ nav a{
     display: flex;
     height: 100%;
     background-image: linear-gradient(to top,white,whitesmoke);
-    border-radius: 20px;
+    border-radius: 40px;
     align-items: center;
     padding-left: 50px;
+    overflow: hidden;
 }
 #description{
-    width: 60%;
-    padding: 20px;
+    width: 50%;
     cursor: default;
 }
 #picture {
     display: flex;
-    width: 40%;
+    width: 50%;
     height: 100%;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 #picture img{
-    transform: scale(180%) translateX(-25px);
-    padding-top: 45px;
+    height: 90%;
+    width: auto;
     filter: drop-shadow(8px 8px 100px royalblue);
 }
 #btnContainer{
     display: flex;
+    width: 100%;
     max-width: 350px;
     column-gap: 30px;
     margin-top: 20px;
 }
 .btn{
-    height: 50px;
-    width: 50%;
+    height: 7vh;
+    min-height: 50px;
+    width: 100%;
     text-align: center;
     border-radius: 10px;
-    border-color: white;
-    border-style: solid;
     color: white;
     font-weight: bold;
     font-size: 1.2em;
@@ -98,9 +98,10 @@ nav a{
     border-bottom-style: solid;
     font-weight: bold;
     text-underline: royalblue;
-    transform: translateY(-10px);
+    transform: scale(1.1);
 }
 #contactbtn{
+    border-style: none;
     background-color: #021245FF;
 }
 #hirebtn{
@@ -130,25 +131,37 @@ nav a{
     height: 100%;
     display: flex;
     align-items: center;
-
+    overflow: hidden;
 }
 #aboutPage main{
     display: flex;
     flex-direction: column;
-    width: 60%;
-    padding-right: 100px;
-
+    width: 50%;
+    padding-right: 10%;
 }
-
+#aboutSections{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 1px;
+}
+.aboutSubSection{
+    background-color: whitesmoke;
+    width: 100%;
+    height: auto;
+}
 #picture2{
     display: flex;
-    width: 40%;
+    width: 50%;
+    height: 100%;
+    align-items: flex-end;
     justify-content: center;
 }
 #picture2 img{
-    padding-top: 45px;
-    transform: rotateY(180deg) scale(180%);
-    margin-bottom: auto;
+    height: 90%;
+    width: auto;
+    filter: drop-shadow(8px 8px 100px royalblue);
+    transform: rotateY(180deg);
 }
 
 #educationPage{
@@ -286,4 +299,24 @@ nav a{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    nav{
+        visibility: hidden;
+    }
+    #homePage{
+        height: 100vh;
+        padding-left: 5%;
+    }
+    #picture{
+        display: none;
+    }
+    #btnContainer{
+        width: 100%;
+        max-width: 350px;
+    }
+    #description{
+        width: 100%;
+    }
 }
