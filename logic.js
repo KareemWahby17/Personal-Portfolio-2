@@ -9,10 +9,13 @@ const pageAbout = document.getElementById("aboutPage");
 const pageEducation = document.getElementById("educationPage");
 const pageExperience = document.getElementById("experiencePage");
 const pageProjects = document.getElementById("projectsPage");
-const pageContacts = document.getElementById("contactPage");
+const pageContact = document.getElementById("contactPage");
+const contactMeButton = document.getElementById("contactbtn");
+const hireMeButton = document.getElementById("hirebtn");
+const contactSubject = document.getElementById("subject");
 
 let navList = [navHome, navAbout, navEducation, navExperience, navProjects, navContacts];
-let pages = [pageHome, pageAbout, pageEducation, pageExperience, pageProjects, pageContacts];
+let pages = [pageHome, pageAbout, pageEducation, pageExperience, pageProjects, pageContact];
 
 let scrollEnabled = true;
 navList.forEach(nav =>{
@@ -42,4 +45,11 @@ window.addEventListener("scroll", function(){
             navList[index].classList.add("active");
         }
     });
+});
+contactMeButton.addEventListener("click", function(){
+    pageContact.scrollIntoView({behavior: 'smooth'});
+});
+hireMeButton.addEventListener("click", function(){
+    pageContact.scrollIntoView({behavior: 'smooth'});
+    contactSubject.value = "I would like to hire you"
 });
