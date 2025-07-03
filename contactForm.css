@@ -132,3 +132,7 @@
 input::placeholder{
     margin-top: 0;
 }
+
+#messageMobile{
+    display: none;
+}
