@@ -160,18 +160,20 @@ nav a{
 
 #educationPage{
     height: 100%;
-    border-radius:20px ;
+    border-radius:40px ;
+    background-color: whitesmoke;
+}
+#eduContainer{
+    height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
-    background-color: whitesmoke;
-
 }
 .eduSection{
     height: 80%;
     width: 25%;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 3%;
     padding-top: 15px;
     padding-left: 10px;
     padding-right: 20px;
@@ -197,14 +199,15 @@ nav a{
     font-family: Calibri;
     color: #021245;
 }
+
 #experiencePage{
     height: 100%;
-    border-radius:20px ;
+    border-radius:40px ;
     display: flex;
     background-image: linear-gradient(#021245,royalblue);
-    padding: 80px 80px 40px 80px;
-    justify-content: space-evenly;
-    gap: 80px;
+    padding: 5% 5% 5% 5%;
+    justify-content: flex-end;
+    overflow-y: auto;
 }
 .card {
     width: 100%;
@@ -334,8 +337,25 @@ nav a{
         height: auto;
         overflow: visible;
         text-align: left;
+        font-size: 2.5vh
     }
     #aboutPage h1{
         font-size: 1.5em;
     }
+    #educationPage{
+        overflow-x: scroll;
+        padding: 0;
+    }
+    #eduContainer{
+        width: 300vw;
+        align-items: center;
+        padding: 0;
+        overflow-x: auto;
+        justify-content: space-around;
+    }
+    .eduSection{
+        margin: 0;
+        margin-top: 5%;
+    }
+
 }
