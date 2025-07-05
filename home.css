@@ -86,6 +86,7 @@ nav a{
     font-weight: bold;
     font-size: 1.2em;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 .active{
     border-bottom: royalblue;
@@ -93,13 +94,13 @@ nav a{
 }
 .inactive{
     border-style: none;
+    transition: all 0.15s;
 }
 .inactive:hover {
     border-bottom: royalblue;
     border-bottom-style: solid;
-    font-weight: bold;
     text-underline: royalblue;
-    transform: scale(1.1);
+
 }
 #contactbtn{
     border-style: none;
@@ -160,6 +161,10 @@ nav a{
     width: auto;
     filter: drop-shadow(8px 8px 100px royalblue);
     border-radius: 2000px;
+    transition: all 0.5s ease;
+}
+#picture2 :hover{
+    transform: scale(1.1);
 }
 
 #educationPage{
@@ -172,6 +177,16 @@ nav a{
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
+}
+#educationPage::-webkit-scrollbar {
+  display: none;
+}
+#educationPage {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#eduContainer > :hover{
+    transform: scale(1.05);
 }
 .eduSection{
     height: 80%;
@@ -186,6 +201,7 @@ nav a{
     text-align: center;
     color: whitesmoke;
     font-family: "Arial Black";
+    transition: all 0.5s ease;
 }
 #educationPage ul{
     text-align: left;
@@ -214,8 +230,8 @@ nav a{
     gap: 5%;
 }
 .card {
-    max-width: 600px;
-    height: 80%;
+    max-width: 570px;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -224,15 +240,16 @@ nav a{
     border-radius: 40px;
     overflow: hidden;
     z-index: 3;
-    filter: drop-shadow(8px 8px 8px royalblue);
+    filter: drop-shadow(0px 8px 8px royalblue);
+    transition: all 0.5s ease;
 }
-/*.card::before {
+.card::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: linear-gradient(to top, black, rgb(30, 144, 255, 0.3));
   z-index: 1;
-}*/
+}
 
 .card h3 {
     position: relative;
@@ -241,10 +258,10 @@ nav a{
     font-size: clamp(1em,2em,2em);
 }
 .experienceLogo{
+    position: absolute;
     border-radius: 20px;
     width: 50px;
     height: 50px;
-    position: absolute;
     top: 3%;
     left: 20px;
     z-index: 2;
@@ -274,28 +291,43 @@ nav a{
 }
 #experiencePage > :hover {
     transform: scale(1.05);
-    transition: linear 100ms;
 }
 
 #projectsPage{
     height: 100%;
-    padding: 80px 30px 30px 30px;
-    border-radius: 20px;
-    background-image: linear-gradient(to top right,royalblue,whitesmoke);
+    padding: 5% 5%;
 }
 #projectContainer{
+    overflow-x: auto;
+    scroll-behavior: smooth;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, auto);   /* 2 rows */
-    gap: 1rem; /* spacing between cards */
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    background-image: linear-gradient(to top right,royalblue,whitesmoke);
+    border-radius: 60px;
 }
-.projects{
-    filter: none;
-    border-color: #021245;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 3px;
+#projectContainer > :hover{
+    transform: scale(1.1);
+}
+#projectContainer::-webkit-scrollbar {
+  display: none;
+}
+#projectContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#projectContainer :first-child{
+    margin-left: 5%;
+}
+#projectContainer :last-child{
+    margin-right: 5%;
+}
+.cardProjects{
+    height: 80%;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
 }
 .projects h3{
     font-size: 20px;
@@ -304,6 +336,7 @@ nav a{
     padding-top:5px ;
     font-size: 15px;
 }
+
 #contactPage{
     height: 100%;
     padding: 80px 30px 30px 30px;
@@ -374,6 +407,7 @@ nav a{
         margin-top: 5%;
     }
     #experiencePage{
+        padding: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -392,9 +426,21 @@ nav a{
         bottom: 0;
         font-size: 7vw;
     }
-
-
-
+    #projectContainer{
+        padding: 5% 5%;
+        background-image: none;
+        background-color: royalblue;
+        flex-wrap: wrap;
+    }
+    .cardProjects{
+        height: 40%;
+    }
+    #projectContainer :first-child{
+        margin-left: 0;
+    }
+    #projectContainer :last-child{
+        margin-right: 0;
+    }
     #message{
         display: none;
     }
@@ -416,6 +462,7 @@ nav a{
     height: 100%;
     width: 100%;
     padding: 20px;
+    max-width: 320px;
     }
     #messageMobile textarea:focus{
     outline: none;
