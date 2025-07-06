@@ -359,7 +359,6 @@ nav a{
     #eduContainer{
         align-items: center;
         padding: 10% 5%;
-        overflow-x: auto;
         justify-content: space-around;
         flex-wrap: wrap;
         gap: 10vw;
@@ -457,12 +456,16 @@ nav a{
         height: auto;
         width: 70%;
         aspect-ratio: 1/1;
+        filter: none;
     }
     #projectContainer :first-child{
         margin-left: 0;
     }
     #projectContainer :last-child{
         margin-right: 0;
+    }
+    #contactPage{
+        padding: 5%;
     }
     #message{
         display: none;

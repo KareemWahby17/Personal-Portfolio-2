@@ -53,3 +53,12 @@ hireMeButton.addEventListener("click", function(){
     pageContact.scrollIntoView({behavior: 'smooth'});
     contactSubject.value = "I would like to hire you"
 });
+
+window.addEventListener("load", () => {
+    const imageUrls = ['2dGraph.png', '3dGraph.png', 'travel.png', 'language.png', 'schedule.jpg', 'encryptor.png', 'Web.png', 'todo.png'];
+
+    imageUrls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+    });
+});
