@@ -78,11 +78,10 @@
     background-color: white;
 }
 #left input:focus{
-    outline: none;
     border-color: dodgerblue;
-    border-width: 2px;
-    border-style: solid;
     background-color: whitesmoke;
+    border-width: 0;
+    outline: none;
 }
 
 #message{
@@ -112,16 +111,13 @@
     font-size: 16px;
 }
 #message textarea:hover{
-    border-color: dodgerblue;
-    border-width: 2px;
-    border-style: solid;
+    border-style: none;
+    background-color: white;
 }
 #message textarea:focus{
-    outline: none;
-    border-color: dodgerblue;
-    border-width: 2px;
-    border-style: solid;
     background-color: whitesmoke;
+    border-width: 0;
+    outline: none;
 }
 #submit{
     border-style: none;
@@ -134,11 +130,21 @@
 }
 input::placeholder{
     font-size: 16px;
+    color: dimgrey;
 }
 textarea::placeholder{
     font-size: 16px;
 }
-
 #messageMobile{
     display: none;
+    font-size: 16px;
+}
+#messageMobile textarea :focus{
+    background-color: whitesmoke;
+    border-width: 0;
+    outline: none;
+}
+#messageMobile textarea::placeholder{
+    font-size: 16px;
+    color: dimgrey;
 }

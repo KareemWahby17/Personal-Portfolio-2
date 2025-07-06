@@ -466,6 +466,7 @@ nav a{
     }
     #contactPage{
         padding: 5%;
+        height: 100vh;
     }
     #message{
         display: none;
@@ -487,14 +488,18 @@ nav a{
     background-color: rgb(255, 255, 255,50%);
     height: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     max-width: 320px;
+    font-size: 16px;
     }
     #messageMobile textarea:focus{
     outline: none;
-    border-color: dodgerblue;
-    border-width: 2px;
-    border-style: solid;
     background-color: whitesmoke;
     }
+}
+@media (hover: none) and (pointer: coarse) {
+  button:hover{
+    all: unset;
+    cursor: default;
+  }
 }
