@@ -37,6 +37,9 @@
 #icons{
     display: flex;
     justify-content: space-evenly;
+    max-width: 320px;
+    width: 100%;
+    align-self: center;
 }
 #icons button {
     width: 40px;

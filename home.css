@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 body{
     height: 100vh;
@@ -130,10 +130,12 @@ nav a{
 }
 
 #aboutPage{
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 8% 0 0 0;
 }
 #aboutPage main{
     display: flex;
@@ -143,11 +145,8 @@ nav a{
     min-height: 50%;
     width: 100%;
     padding: 5% 15%;
-    font-size: 1.8em;
     text-align: center;
-}
-#aboutPage h1{
-    font-size: clamp(2em,8vh,3.7em);
+    font-size: 1.8em;
 }
 #picture2{
     display: flex;
@@ -196,19 +195,23 @@ nav a{
     padding-top: 15px;
     padding-left: 10px;
     padding-right: 20px;
-    background-image: linear-gradient(dodgerblue,whitesmoke);
-    filter: drop-shadow(0px 8px 8px dodgerblue);
+    background-color: royalblue;
+    filter: drop-shadow(0px 8px 8px royalblue);
     text-align: center;
     color: whitesmoke;
     font-family: "Arial Black";
     transition: all 0.5s ease;
 }
+#educationPage h2{
+    color: dodgerblue;
+}
 #educationPage ul{
     text-align: left;
     margin-left: 30px;
-    color: #021245;
+    color: white;
     font-family: Calibri;
     font-size: 20px;
+    font-weight: lighter;
 }
 #educationPage p{
     text-align: left;
@@ -217,21 +220,21 @@ nav a{
     padding-top: 15px;
     padding-bottom: 10px;
     font-family: Calibri;
-    color: #021245;
+    color: white;
 }
 
 #experiencePage{
     min-height: 100vh;
+    height: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 50px;
+    padding: 5% 0;
 }
 .card {
     position: relative;
-    max-width: 570px;
-    height: 70%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -296,6 +299,8 @@ nav a{
 #projectsPage{
     height: 100%;
     padding: 5% 5%;
+    background-color: whitesmoke;
+    border-radius: 0;
 }
 #projectContainer{
     overflow-x: auto;
@@ -303,7 +308,7 @@ nav a{
     height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 5%;
     align-items: center;
     background-image: linear-gradient(to top right,royalblue,whitesmoke);
     border-radius: 60px;
@@ -318,7 +323,7 @@ nav a{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-#projectContainer :first-child{
+#projectContainer > :first-child{
     margin-left: 5%;
 }
 #projectContainer :last-child{
@@ -329,22 +334,58 @@ nav a{
     aspect-ratio: 1/1;
     flex-shrink: 0;
 }
-.projects h3{
-    font-size: 20px;
+.cardProjects h3{
+
 }
-.projects p{
+.cardProjects p{
     padding-top:5px ;
-    font-size: 15px;
 }
 
 #contactPage{
     height: 100%;
     padding: 80px 30px 30px 30px;
     border-radius: 40px;
-    background-color: whitesmoke;
+    background-color: transparent;
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width:1024px) {
+    #educationPage{
+        padding: 0;
+        height: auto;
+    }
+    #eduContainer{
+        align-items: center;
+        padding: 10% 5%;
+        overflow-x: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10vw;
+    }
+    .eduSection{
+        margin: 0;
+        min-width: 300px;
+        width: 90%;
+        background-image: none;
+        background-color: royalblue;
+        filter: drop-shadow(0px 8px 8px royalblue);
+        padding: 20px;
+    }
+    #experiencePage{
+        padding: 10% 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    }
+    .card{
+        max-width: 60vw;
+        width: 100%;
+        aspect-ratio: 1/1;
+        padding: 10%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -391,33 +432,8 @@ nav a{
     #aboutPage h1{
         font-size: 1.5em;
     }
-    #educationPage{
-        overflow-x: scroll;
-        padding: 0;
-    }
-    #eduContainer{
-        width: 300vw;
-        align-items: center;
-        padding: 0;
-        overflow-x: auto;
-        justify-content: space-around;
-    }
-    .eduSection{
-        margin: 0;
-        margin-top: 5%;
-    }
-    #experiencePage{
-        padding: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10vw;
-    }
     .card{
         max-width: 80vw;
-        width: 100%;
-        aspect-ratio: 1/1;
-        padding: 10%;
     }
     .card p{
         display: none;
@@ -426,14 +442,21 @@ nav a{
         bottom: 0;
         font-size: 7vw;
     }
+    #projectsPage{
+        height: fit-content;
+        padding: 10% 0;
+    }
     #projectContainer{
+        height: fit-content;
         padding: 5% 5%;
         background-image: none;
-        background-color: royalblue;
-        flex-wrap: wrap;
+        background-color: transparent;
+        border-radius: 0;
     }
     .cardProjects{
-        height: 40%;
+        height: auto;
+        width: 70%;
+        aspect-ratio: 1/1;
     }
     #projectContainer :first-child{
         margin-left: 0;
