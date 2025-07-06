@@ -79,6 +79,7 @@ nav a{
 .btn{
     height: 7vh;
     min-height: 50px;
+    max-height: 150px;
     width: 100%;
     text-align: center;
     border-radius: 10px;
@@ -130,12 +131,10 @@ nav a{
 }
 
 #aboutPage{
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8% 0 0 0;
 }
 #aboutPage main{
     display: flex;
@@ -468,38 +467,29 @@ nav a{
         padding: 5%;
         height: 100vh;
     }
-    #message{
-        display: none;
+    #container{
+        flex-direction: column;
+        align-items: center;
     }
     #left{
         width: 100%;
+        padding-bottom: 20px;
     }
-    #messageMobile{
-        display: block;
-        width: auto;
-        height: 35%;
+    #message{
+        width: 100%;
         padding: 0;
-        border-radius: 10px;
     }
-    #messageMobile textarea{
-    align-self: center;
-    border-radius: 10px;
-    border-style: none;
-    background-color: rgb(255, 255, 255,50%);
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    max-width: 320px;
-    font-size: 16px;
+    #message textarea{
+        resize: none;
+        max-width: 320px;
+        border-radius: 15px;
     }
-    #messageMobile textarea:focus{
-    outline: none;
-    background-color: whitesmoke;
+    #submit{
+        display: none;
     }
-}
-@media (hover: none) and (pointer: coarse) {
-  button:hover{
-    all: unset;
-    cursor: default;
-  }
+    #submitMobile{
+        display: block;
+        width: 100%;
+        margin: 5% 0;
+    }
 }

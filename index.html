@@ -150,8 +150,8 @@
     </section>
 
     <section id="contactPage">
-        <div id="blur" action="https://api.web3forms.com/submit" method="POST">
-            <form id="container">
+        <div id="blur">
+            <form id="container" action="https://api.web3forms.com/submit" method="POST">
                 <div class="section" id="left">
                     <h1 id="SignInTitle" style="margin-bottom: 10px;font-family: 'Arial Black'; font-size: 2.5em; cursor: default;">Contact Me</h1>
                     <div id="icons">
@@ -163,14 +163,12 @@
                     <input type="text" name="name" id="name" class="in" placeholder="Name" autocomplete="off" required>
                     <input type="email" name="email" id="email" class="in" placeholder="Email" autocomplete="off" required>
                     <input type="text" name="subject" id="subject" class="in" placeholder="Subject" autocomplete="off">
-                    <div class="section" id="messageMobile">
-                        <textarea id="messageInput2" name="message" class="in" placeholder="Please type your message here" autocomplete="off" required></textarea>
-                    </div>
                     <button id="submit" class="btn">Submit</button>
                 </div>
                 <div class="section" id="message">
                         <textarea id="messageInput" name="message" class="in" placeholder="Please type your message here" autocomplete="off" required></textarea>
                 </div>
+                <button id="submitMobile" class="btn">Submit</button>
             </form>
         </div>
     </section>
