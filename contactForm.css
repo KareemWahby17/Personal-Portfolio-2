@@ -134,11 +134,8 @@ input::placeholder{
 }
 #message textarea::placeholder{
     font-size: 16px;
+    color: dimgrey;
 }
 #submitMobile{
     display: none;
-}
-#submitMobile ::placeholder{
-    color: dimgrey;
-    font-size: 16px;
 }
