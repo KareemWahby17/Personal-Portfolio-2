@@ -138,3 +138,7 @@ input::placeholder{
 #submitMobile{
     display: none;
 }
+#submitMobile ::placeholder{
+    color: dimgrey;
+    font-size: 16px;
+}
